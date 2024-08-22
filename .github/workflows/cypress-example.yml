@@ -23,7 +23,9 @@ jobs:
           node-version: 20.16.0
       
       - name: Install depedencies
-        run: npm install
+        run: |
+          npm install
+          cypress install
 
       - name: Run Cypress tests
         run: npm run cypress:headless
