@@ -23,11 +23,7 @@ jobs:
           node-version: 20.16.0
       
       - name: Install depedencies
-        run: |
-          echo "Install NPM libraries"
-          npm install
-          echo "Install cypress depedencies"
-          cypress install
+        run: npm install
 
       - name: Run Cypress tests
         run: npm run cypress:headless
