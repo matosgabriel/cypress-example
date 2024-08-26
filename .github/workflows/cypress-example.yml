@@ -26,15 +26,14 @@ jobs:
         run: |
           npm install
           npx cypress install
-          
-      - name: Rotate and Update Secrets
-        env:
-          FEDE_VAR: "123"
-          GABI_VAR: "456"
-          JOHNNY_VAR: "789"
-        run: printenv
       
       - name: Run Cypress tests
         run: |
           npm run cypress:headless
           printenv
+
+      - name: Run spreadsheet filling
+        env:
+          secret1: ${{ secrets.SECRET1 }}
+          secret2: ${{ secrets.SECRET2 }}
+        run: printenv
