@@ -32,7 +32,7 @@ jobs:
           FEDE_VAR: "123"
           GABI_VAR: "456"
           JOHNNY_VAR: "789"
-        run: clear
+        run: printenv
       
       - name: Run Cypress tests
         run: |
