@@ -26,6 +26,12 @@ jobs:
         run: |
           npm install
           npx cypress install
-
+          
+      - name: Rotate and Update Secrets
+        env:
+          FEDE_VAR: "123"
+          GABI_VAR: "456"
+        run: printvar
+      
       - name: Run Cypress tests
         run: npm run cypress:headless
