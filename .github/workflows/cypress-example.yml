@@ -30,10 +30,3 @@ jobs:
       - name: Run Cypress tests
         run: |
           npm run cypress:headless
-          printenv
-
-      - name: Run spreadsheet filling
-        env:
-          secret1: ${{ secrets.SECRET1 }}
-          secret2: ${{ secrets.SECRET2 }}
-        run: printenv
