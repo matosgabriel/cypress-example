@@ -31,7 +31,7 @@ jobs:
         env:
           FEDE_VAR: "123"
           GABI_VAR: "456"
-        run: printvar
+        run: printenv
       
       - name: Run Cypress tests
         run: npm run cypress:headless
